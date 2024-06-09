@@ -1,0 +1,84 @@
+﻿/* Общие стили для ссылок */
+a {
+    color: #0077cc;
+    text-decoration: none;
+}
+
+    a:hover {
+        color: #0056a3;
+        text-decoration: underline;
+    }
+
+    /* Стили для бренда навигационной панели */
+    a.navbar-brand {
+        white-space: nowrap;
+        text-align: center;
+        word-break: break-word;
+    }
+
+/* Стили для кнопок */
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+    font-size: 1.5rem; /* Увеличиваем размер шрифта */
+    padding: .75rem 1.5rem; /* Увеличиваем внутренние отступы */
+}
+
+    .btn-primary:hover {
+        background-color: #155a96;
+        border-color: #124d82;
+    }
+
+/* Стили для активных ссылок в навигационной панели */
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+/* Стили для границ */
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+/* Стили для теней */
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+/* Стили для кнопки принятия политики */
+button.accept-policy {
+    font-size: 1.5rem; /* Увеличиваем размер шрифта */
+    line-height: 4;
+    padding: .75rem 3rem; /* Увеличиваем внутренние отступы */
+    color: #fff;
+    background-color: #28a745;
+    border: 1px solid #28a745;
+    border-radius: .25rem;
+}
+
+    button.accept-policy:hover {
+        background-color: #218838;
+        border-color: #1e7e34;
+    }
+
+/* Стили для футера */
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 1rem 0;
+    border-top: 1px solid #e5e5e5;
+}
+
+    .footer p {
+        margin: 0;
+        color: #6c757d;
+    }

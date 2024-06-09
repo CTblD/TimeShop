@@ -1,0 +1,40 @@
+﻿@using TIMEShop1.Data;
+@using TIMEShop1.ViewModels;
+@model IEnumerable<TIMEShop1.Models.Watch>
+
+@{
+	ViewData["Title"] = "Watch List";
+}
+
+<div class="album py-5 bg-light">
+	<div class="container">
+		<div class="row">
+			@foreach (var watch in Model)
+			{
+				<div class="col-md-4">
+					<div class="card">
+						<img src="@watch.ImageUrl" class="card-img-top" alt="@watch.Model">
+						<div class="card-body">
+							<h5 class="card-title">@watch.Brand @watch.Model</h5>
+							<p class="card-text">$@watch.Price</p>
+							<a type="button" class="btn btn-sm btn-outline-info" asp-controller="Watch" asp-action="Details" asp-route-id="@watch.Id">
+                                        Подробнее
+                                    </a>
+							@if (User.Identity.IsAuthenticated && User.IsInRole("admin"))
+                            {
+                                <div>
+                                    <a type="button" class="btn btn-sm btn-outline-info" asp-controller="Watch" asp-action="Edit" asp-route-id="@watch.Id">
+                                        Редактировать
+                                    </a>
+                                    <a  type="button" class="btn btn-sm btn-outline-info" asp-controller="Watch" asp-action="Delete" asp-route-id="@watch.Id">
+                                        Удалить
+                                    </a>
+                                </div>
+                            }
+						</div>
+					</div>
+				</div>
+			}
+		</div>
+	</div>
+</div>

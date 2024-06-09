@@ -1,0 +1,44 @@
+﻿@using TIMEShop1.Data
+@model Watch
+
+<h1>Are you sure you want to delete this watch?</h1>
+
+<form method="post" asp-action="Delete" enctype="multipart/form-data">
+	<div class="form-group">
+		<label asp-for="Brand">Brand</label>
+		<input asp-for="Brand" class="form-control" placeholder="Brand">
+		<span asp-validation-for="Brand" class="text-danger"></span>
+	</div>
+	<div class="form-group">
+		<label asp-for="Model">Model</label>
+		<input asp-for="Model" class="form-control" placeholder="Model">
+		<span asp-validation-for="Model" class="text-danger"></span>
+	</div>
+	<div class="form-group">
+		<label asp-for="Price">Price</label>
+		<input asp-for="Price" class="form-control" placeholder="Price">
+		<span asp-validation-for="Price" class="text-danger"></span>
+	</div>
+	<div class="form-group">
+		<label asp-for="Description">Description</label>
+		<input asp-for="Description" class="form-control" placeholder="Description">
+		<span asp-validation-for="Description" class="text-danger"></span>
+	</div>
+	<div class="form-group">
+		<label asp-for="Model">City</label>
+		<input asp-for="Model" class="form-control" placeholder="Model">
+		<span asp-validation-for="Model" class="text-danger"></span>
+	</div>
+	<div class="form-group">
+		<label asp-for="ImageUrl">Image</label>
+		<input asp-for="ImageUrl" type="file" class="form-control" placeholder="ImageUrl">
+		<span asp-validation-for="ImageUrl" class="text-danger"></span>
+
+	</div>
+</form>
+<div class="form-group">
+	<form action="Delete" method="post">
+		<input type="hidden" asp-for="Id" />
+		<input type="submit" value="Confirm" class="btn btn-danger float-right mt-3" />
+	</form>
+</div>
